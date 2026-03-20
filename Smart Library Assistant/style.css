@@ -1,0 +1,107 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: #f4f7f6; display: flex; justify-content: center; min-height: 100vh; }
+
+.hidden { display: none !important; }
+
+/* Auth Styles */
+.auth-card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 350px; margin-top: 100px; text-align: center; height: fit-content; }
+.auth-card input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; }
+.auth-card button { width: 100%; padding: 12px; background: #3498db; color: white; border: none; border-radius: 5px; cursor: pointer; }
+.toggle-text { margin-top: 15px; font-size: 13px; color: #7f8c8d; }
+.toggle-text span { color: #3498db; cursor: pointer; font-weight: bold; }
+
+/* Main App Styles */
+#mainApp { width: 100%; }
+.navbar { background: #2c3e50; color: white; padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; }
+.app-container { max-width: 1100px; margin: 20px auto; padding: 0 20px; }
+.main-layout { display: flex; gap: 20px; }
+
+.left-panel { flex: 2; }
+.right-panel { flex: 1; }
+
+.dashboard-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.due-box { background: #ff7675; color: white; padding: 10px; border-radius: 5px; margin: 15px 0; font-weight: bold; }
+
+/* Book Grid & Shelves */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+.book-card { background: white; padding: 15px; border-radius: 8px; border: 1px solid #eee; }
+.library-map { display: flex; gap: 10px; margin-top: 15px; }
+.shelf { flex: 1; padding: 20px; border: 2px solid #34495e; text-align: center; border-radius: 5px; }
+.shelf.active { background: #2ecc71; color: white; border-color: #27ae60; }
+
+.due-tag {
+    font-size: 11px;
+    background: #ffeaa7;
+    color: #d63031;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: block;
+    margin-top: 5px;
+}
+
+.rec-item {
+    padding: 10px;
+    border-left: 3px solid #2ecc71;
+    background: #f1fcf4;
+    margin-bottom: 8px;
+    border-radius: 0 5px 5px 0;
+    font-size: 14px;
+}
+
+.recommendations { margin-top: 20px; border-top: 4px solid #2ecc71; }
+
+.overdue {
+    border-left: 4px solid #d63031 !important;
+    background-color: #fff5f5 !important;
+}
+
+.overdue .due-tag {
+    background: #d63031;
+    color: white;
+    font-weight: bold;
+}
+
+.profile-card {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+
+.status-badge {
+    background: #2ecc71;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.card-body { display: flex; align-items: center; gap: 15px; }
+
+.qr-placeholder img {
+    width: 70px;
+    height: 70px;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.user-info p { margin: 2px 0; }
+
+/* Animation for the "Fine" alert */
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(214, 48, 49, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(214, 48, 49, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(214, 48, 49, 0); }
+}
+
+.overdue-alert {
+    animation: pulse-red 2s infinite;
+    border: 2px solid #d63031;
+}
